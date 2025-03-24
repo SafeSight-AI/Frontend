@@ -3,8 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #242424; /* Set dark background for the whole app */
-  color: rgba(255, 255, 255, 0.87); /* Light text on dark background */
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .logo {
@@ -39,37 +39,35 @@
 
 .card {
   padding: 2em;
-  background-color: #333; /* Dark background for card */
-  color: #fff; /* Light text in card */
+  background-color: #333;
+  color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .read-the-docs {
-  color: #bbb; /* Lighter text for links in dark mode */
+  color: #bbb;
 }
 
-/* Force Dark Mode for Mobile Screens */
 @media (max-width: 768px) {
   body {
-    background-color: #242424; /* Ensure dark background on mobile */
-    color: rgba(255, 255, 255, 0.87); /* Light text */
+    background-color: #242424;
+    color: rgba(255, 255, 255, 0.87);
   }
 
   .card {
-    background-color: #333; /* Dark background for cards on mobile */
+    background-color: #333;
   }
 
   .logo {
-    filter: drop-shadow(0 0 2em #646cffaa); /* Dark mode hover effect */
+    filter: drop-shadow(0 0 2em #646cffaa);
   }
 
-  /* Force dark mode for mobile links */
   a {
-    color: #646cff; /* Link color in dark mode */
+    color: #646cff;
   }
 
   a:hover {
-    color: #535bf2; /* Link hover color */
+    color: #535bf2;
   }
 }
