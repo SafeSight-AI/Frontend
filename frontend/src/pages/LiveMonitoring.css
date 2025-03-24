@@ -1,16 +1,16 @@
 .live-monitoring-title {
     position: absolute;
-    top: 60px;  /* Adjust based on the height of your navbar */
-    left: 50%;  /* Centers the title horizontally */
-    transform: translateX(-50%);  /* Adjust to exactly center the title */
+    top: 60px;  
+    left: 50%; 
+    transform: translateX(-50%); 
     font-size: 2rem;
     font-weight: bold;
-    text-align: center;  /* Center the text inside the title */
+    text-align: center;
 }
 
 .container {
     padding: 20px;
-    margin-top: 100px; /* Add margin to push the content down */
+    margin-top: 100px;
 }
 .item{
     padding-right: 30px;
@@ -79,4 +79,53 @@ hr {
 ul {
     list-style-type: none;
     padding-left: 0;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .live-monitoring-title {
+        position: relative;
+        top: 60px;
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 10px;
+        margin-top: 80px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .item {
+        padding-right: 15px;
+    }
+
+    .live {
+        background-color: green;
+    }
+    
+    .offline {
+        background-color: red;
+    }
+
+    .status-circle {
+        width: 12px;
+        height: 12px;
+    }
+
+    .navbar-link {
+        font-size: 14px;
+    }
+
+    .green, .red {
+        font-size: 12px;
+    }
+
+    .status-container {
+        align-items: center;
+        padding: 5px;
+    }
 }

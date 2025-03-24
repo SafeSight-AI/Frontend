@@ -77,30 +77,29 @@
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        height: auto; /* Allow navbar to expand vertically */
+        height: 80px;
         padding: 10px;
     }
 
-    /* Stack the logo and the links vertically on small screens */
     .logo-container {
+        padding-left: 60px;
         margin-bottom: 10px;
-        justify-content: center; /* Center the logo horizontally */
+        justify-content: center; 
     }
 
     .navbar-list {
-        flex-direction: column;
         align-items: center;
+        padding-top: 80px;
         width: 100%;
-        gap: 15px; /* Adjust spacing between links */
+        gap: 15px; 
     }
 
-    /* Adjust the size of the logo text for smaller screens */
     .logo-text {
         font-size: 20px;
-        text-align: center; /* Center the logo text */
+        text-align: center;
     }
 
     .navbar-link {
-        font-size: 16px; /* Slightly smaller font size for mobile */
+        font-size: 15px;
     }
 }

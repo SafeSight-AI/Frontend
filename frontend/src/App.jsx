@@ -12,11 +12,11 @@ function App() {
   return (
     <>
       <div className="pt-16"></div>
-      <Router basename="/Frontend"> {/* Ensures all routes are under /Frontend */}
+      <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Navigate to="/Home" replace/>}/>
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Navigate to="/Frontend" replace />} />
+          <Route path="/Frontend" element={<Home />} />
           <Route path="/live-monitoring" element={<LiveMonitoring />} />
           <Route path="/alert-history" element={<AlertHistory />} />
           <Route path="*" element={<Navigate to="/" />} />

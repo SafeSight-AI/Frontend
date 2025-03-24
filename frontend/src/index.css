@@ -54,15 +54,43 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+/* Light mode styles */
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  a {
+    color: #1a73e8; /* Link color in light mode */
   }
+
   a:hover {
-    color: #747bff;
+    color: #0c56d1; /* Hover color for links in light mode */
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Light button background */
+    color: #242424; /* Dark text on button */
+  }
+
+  button:hover {
+    background-color: #e0e0e0; /* Hover color for button in light mode */
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #646cff; /* Link color in dark mode */
+  }
+
+  a:hover {
+    color: #535bf2; /* Hover color for links */
+  }
+
+  button {
+    background-color: #1a1a1a; /* Dark button background */
+    color: white; /* Light text on button */
+  }
+
+  button:hover {
+    border-color: #646cff; /* Button hover border color */
   }
 }
