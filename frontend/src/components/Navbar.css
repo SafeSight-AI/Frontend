@@ -57,7 +57,7 @@
     width: 100%;  /* Make the links container span the full width */
     position: absolute;
     left: 50%;  /* Start the list from the center */
-    transform: translateX(-50%);  /* Center the list */
+    transform: translateX(-51%);  /* Center the list */
 }
 
 .navbar-link {
@@ -71,4 +71,36 @@
 .navbar-link:hover {
     text-decoration: underline;
     color: #ddd;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto; /* Allow navbar to expand vertically */
+        padding: 10px;
+    }
+
+    /* Stack the logo and the links vertically on small screens */
+    .logo-container {
+        margin-bottom: 10px;
+        justify-content: center; /* Center the logo horizontally */
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px; /* Adjust spacing between links */
+    }
+
+    /* Adjust the size of the logo text for smaller screens */
+    .logo-text {
+        font-size: 20px;
+        text-align: center; /* Center the logo text */
+    }
+
+    .navbar-link {
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
 }
