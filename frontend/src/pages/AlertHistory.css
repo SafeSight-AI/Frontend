@@ -3,130 +3,139 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     padding: 20px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
+}
+
+h1.title {
+    font-size: 3vw;  /* Responsive title font size */
     margin-bottom: 10px;
-  }
-  
-  p {
+}
+
+p {
     font-size: 1.1rem;
     margin-bottom: 20px;
-  }
-  
-  table {
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;  /* Horizontal scroll for small screens */
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-  }
-  
-  th, td {
+}
+
+th, td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-  }
-  
-  th {
+}
+
+th {
     background-color: #4CAF50;
     color: white;
-  }
-  
-  tr:hover {
+}
+
+tr:hover {
     background-color: #f1f1f1;
-  }
-  
-  td {
+}
+
+td {
     word-wrap: break-word;
     max-width: 300px;
-  }
-  
-  .error {
+}
+
+.error {
     color: red;
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 60px;
+    }
+    
     body {
-      padding: 15px;
+        padding: 15px;
     }
-  
-    h1 {
-      font-size: 1.8rem;
-      text-align: center;
+
+    h1.title {
+        font-size: 5vw;  /* Smaller title size for mobile */
+        text-align: center;
     }
-  
+
     p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
+
     table {
-      font-size: 0.9rem;
+        font-size: 0.2rem;
     }
-  
+
     th, td {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     td {
-      max-width: 100%;
+        max-width: 50%;
     }
-  
+
     /* Stack the table headers and cells for small screens */
     table, th, td {
-      display: block;
+        display: block;
     }
-  
+
     th {
-      background-color: #4CAF50;
-      color: white;
-      font-weight: bold;
+        background-color: #4CAF50;
+        color: white;
+        font-weight: bold;
     }
-  
+
     td {
-      padding-left: 40%;
-      position: relative;
-      text-align: right;
+        padding-left: 40%;
+        position: relative;
+        text-align: right;
     }
-  
+
     td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 0.9rem;
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
     }
-  
-    /* Adjust the 'No Head Coverings' text */
-    td.no-head-coverings {
-      color: #999;
+
+    .no-head-coverings {
+        color: #999;
     }
-  }
-  
-  /* For small screen tables */
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.5rem;
+}
+
+/* For small screen tables */
+@media (max-width: 480px) {
+
+    h1.title {
+        font-size: 6vw;  /* Even smaller title for very small screens */
     }
-  
+
     p {
-      font-size: 0.9rem;
+        font-size: 0.9rem;
     }
-  
+
     table {
-      font-size: 0.8rem;
+        font-size: 0.8rem;
     }
-  
+
     th, td {
-      padding: 8px;
+        padding: 8px;
     }
-  }
-  
+}

@@ -35,11 +35,11 @@ function AlertHistory() {
     }, []);
 
     return (
-        <div>
-            <h1>Alert History</h1>
+        <div className="container">
+            <h2>Alert History</h2>
             <p>View past alerts here.</p>
 
-            {loading && <p>Loading...</p>}
+            {loading && <p>Loading....</p>}
             {error && <p style={{ color: "red" }}>Error: {error}</p>}
 
             {!loading && !error && alerts.length > 0 ? (
