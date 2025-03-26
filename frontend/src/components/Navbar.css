@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil&display=swap');
 
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -61,9 +61,11 @@
 }
 
 .navbar-link:hover {
-    text-decoration: underline;
-    color: #ddd;
+    color: #ffffff;
+    border-radius: 12px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8); 
 }
+
 
 @media (max-width: 768px) {
     .navbar {

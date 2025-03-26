@@ -12,9 +12,9 @@ body {
     padding: 20px;
 }
 
-h1.title {
-    font-size: 3vw;  /* Responsive title font size */
-    margin-bottom: 10px;
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 p {
@@ -22,38 +22,33 @@ p {
     margin-bottom: 20px;
 }
 
-.table-wrapper {
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
     width: 100%;
-    overflow-x: auto;  /* Horizontal scroll for small screens */
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+/* Line Chart Styles */
+.chart-container {
+    width: 50%;  /* Take 50% of the container width */
+    min-width: 300px;  /* Ensure a minimum width */
+    max-width: 600px;  /* Set max width for responsiveness */
+    height: 300px;  /* Set height for chart */
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+/* Table Styles */
+.table-container {
+    width: 50%;  /* Take 50% of the container width */
+    min-width: 300px;  /* Ensure a minimum width */
+    max-width: 600px;  /* Set max width for responsiveness */
+    height: 300px;  /* Set height for table */
+    overflow-y: auto;  /* Allow scrolling if content exceeds height */
 }
 
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-
-tr:hover {
-    background-color: #f1f1f1;
-}
-
-td {
-    word-wrap: break-word;
-    max-width: 300px;
-}
-
+/* Error message */
 .error {
     color: red;
 }
@@ -63,13 +58,13 @@ td {
     .container {
         padding-top: 60px;
     }
-    
+
     body {
         padding: 15px;
     }
 
-    h1.title {
-        font-size: 5vw;  /* Smaller title size for mobile */
+    h2 {
+        font-size: 1.5rem;
         text-align: center;
     }
 
@@ -77,65 +72,16 @@ td {
         font-size: 1rem;
     }
 
-    table {
-        font-size: 0.2rem;
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    th, td {
-        padding: 10px;
-    }
-
-    td {
-        max-width: 50%;
-    }
-
-    /* Stack the table headers and cells for small screens */
-    table, th, td {
-        display: block;
-    }
-
-    th {
-        background-color: #4CAF50;
-        color: white;
-        font-weight: bold;
-    }
-
-    td {
-        padding-left: 40%;
-        position: relative;
-        text-align: right;
-    }
-
-    td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-    }
-
-    .no-head-coverings {
-        color: #999;
-    }
-}
-
-/* For small screen tables */
-@media (max-width: 480px) {
-
-    h1.title {
-        font-size: 6vw;  /* Even smaller title for very small screens */
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    table {
-        font-size: 0.8rem;
-    }
-
-    th, td {
-        padding: 8px;
+    .chart-container,
+    .table-container {
+        width: 50%;
+        min-width: unset;
+        max-width: unset;
+        height: 250px;  /* Adjust height for mobile */
     }
 }
