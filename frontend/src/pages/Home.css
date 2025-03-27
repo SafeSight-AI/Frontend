@@ -5,6 +5,7 @@
     min-height: 100vh;
     padding: 20px;
     margin-bottom: -250px;
+    margin-left: -20px;
 }
 
 .content-wrapper {
@@ -28,6 +29,7 @@
 .title-container {
     margin-top:70px;
     margin-bottom: -200px;
+    margin-left: -20px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -62,6 +64,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-left: -10px;
 }
 
 .journey-content {
@@ -92,9 +95,10 @@
 }
 
 .team-container {
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 20px;
     text-align: center;
+    margin-left: -25px;
 }
 
 .team-container h1 {
@@ -148,3 +152,91 @@
     margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+    .home-container{
+        width: 100%;
+        margin-top: 70px;
+        margin-bottom: -50px;
+    }
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .home-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .text-content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-size: 24px;
+    }
+
+    .text-content p {
+        font-size: 18px;
+    }
+
+    .journey-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .journey-content {
+        padding: 10px;
+    }
+
+    .journey-image {
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    .team-container h1 {
+        font-size: 28px;
+    }
+
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-container h1 {
+        font-size: 24px;
+    }
+
+    .text-content h1 {
+        font-size: 20px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+
+    .journey-content h1 {
+        font-size: 22px;
+    }
+
+    .journey-content p {
+        font-size: 14px;
+    }
+
+    .team-container h1 {
+        font-size: 24px;
+    }
+
+    .team-card {
+        max-width: 100%;
+    }
+}

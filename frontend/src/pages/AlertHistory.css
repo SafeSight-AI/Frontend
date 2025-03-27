@@ -55,23 +55,6 @@ p {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    .container {
-        padding-top: 60px;
-    }
-
-    body {
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
     .flex-container {
         flex-direction: column;
         align-items: center;
@@ -79,9 +62,22 @@ p {
 
     .chart-container,
     .table-container {
-        width: 50%;
-        min-width: unset;
-        max-width: unset;
-        height: 250px;  /* Adjust height for mobile */
+        width: 100%; /* Full width for better readability */
+        height: auto; /* Let content dictate height */
+    }
+
+    .table-container {
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+
+    table {
+        width: 100%; /* Ensure table takes full width */
+        font-size: 14px; /* Reduce font size slightly */
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        white-space: nowrap; /* Prevent content wrapping */
     }
 }

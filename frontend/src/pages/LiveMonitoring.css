@@ -120,6 +120,7 @@ ul {
     .container {
         padding: 10px;
         margin-top: 80px;
+        align-items: center;
     }
 
     .card {
@@ -155,5 +156,8 @@ ul {
     .status-container {
         align-items: center;
         padding: 5px;
+    }
+    .detection-response{
+        margin-left:20px;
     }
 }

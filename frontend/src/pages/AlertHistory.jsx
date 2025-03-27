@@ -119,7 +119,7 @@ function AlertHistory() {
         <div className="container">
             <h2>Alert History</h2>
 
-            {loading && <p>Loading....</p>}
+            {loading && <p>Loading...</p>}
             {error && <p style={{ color: "red" }}>Error: {error}</p>}
             {chartData ? (
                 <Line data={chartData} />
