@@ -6,7 +6,7 @@ const LiveMonitoring = () => {
     const [responseMetadata, setResponseMetadata] = useState(null);
     const [responseDate, setResponseDate] = useState(null);
 
-    const apiUrl = 'https://pfmthlmvvh.execute-api.us-east-1.amazonaws.com/prod/rekognition';
+    const apiUrl = 'https://pfmthlmvvh.execute-api.us-east-1.amazonaws.com/prod/rekognition/latest';
     const pollInterval = 5000;
 
     useEffect(() => {

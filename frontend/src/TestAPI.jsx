@@ -4,7 +4,7 @@ const TestAPI = () => {
     const [result, setResult] = useState(null);
     const [lastFileName, setLastFileName] = useState(null);
 
-    const apiUrl = 'https://pfmthlmvvh.execute-api.us-east-1.amazonaws.com/prod/rekognition';
+    const apiUrl = 'https://pfmthlmvvh.execute-api.us-east-1.amazonaws.com/prod/rekognition/latest';
     const pollInterval = 5000; // Poll AWS every 5 seconds
 
     useEffect(() => {
