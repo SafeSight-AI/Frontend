@@ -14,7 +14,7 @@ ModuleRegistry.registerModules([
     CellStyleModule
 ]);
 
-const apiUrl = "https://bow5d7w7r3.execute-api.us-east-1.amazonaws.com/prod/getResultsList";
+const apiUrl = "https://pfmthlmvvh.execute-api.us-east-1.amazonaws.com/prod/rekognition/all";
 
 function AlertHistory() {
     const [alerts, setAlerts] = useState([]);
