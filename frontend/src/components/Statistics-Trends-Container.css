@@ -1,4 +1,4 @@
-.graph-container {
+.statistics-trends-container {
     width: 250px;
     height: 250px;
     background-color: #1e1e2f;
@@ -13,3 +13,12 @@
     align-items: center;
   }
   
+  .statistics-trends-wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 12px;
+    width: 110%; /* Adjusted width of all the 4 boxes within the container with this */
+    height: 100%;
+  }

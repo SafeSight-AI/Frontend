@@ -1,9 +1,9 @@
-.active-alerts-container {
-    width: 250px;
-    height: 250px;  
-    background-color: #ab3535;
+.statistics-container {
+    width: 100px;
+    height: 100px;
+    background-color: #47f11c;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,1.o);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
     color: white;
     padding: 16px;
     box-sizing: border-box;

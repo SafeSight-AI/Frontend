@@ -1,0 +1,15 @@
+.future-risk-container {
+  width: 100px;
+  height: 100px;
+  background-color: #1e0f0f;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
