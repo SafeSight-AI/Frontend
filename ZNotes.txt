@@ -10,5 +10,6 @@ Component for each card
 
 To do:
 -Textured background
--Figure out grid still
+-Better card design
+
 
