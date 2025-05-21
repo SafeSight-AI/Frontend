@@ -1,0 +1,25 @@
+.dash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin-bottom: 0px;
+    margin-left: -20px;
+    width: 1200px;
+    height: 800px;
+    
+}
+
+.dash-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgb(53, 53, 53);
+    overflow: hidden; /* Prevent overflow of the components inside */
+}

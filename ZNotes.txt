@@ -1,0 +1,14 @@
+5/20/25
+What did i do: 
+-Added dashboard to navbar
+-Stopped horizontal scrolling on homepage (index.css top line)
+-Changed distances between containers on homepage
+- npm install react-grid-layout react-resizable (for react grid layout)
+
+Ideas:
+Component for each card
+
+To do:
+-Textured background
+-Figure out grid still
+

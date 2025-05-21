@@ -4,7 +4,7 @@
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    margin-bottom: -250px;
+    margin-bottom: 0px;
     margin-left: -20px;
 }
 
@@ -27,8 +27,8 @@
 }
 
 .title-container {
-    margin-top:70px;
-    margin-bottom: -200px;
+    margin-top:50px;
+    margin-bottom: -150px;
     margin-left: -20px;
     width: 100%;
     display: flex;
@@ -65,6 +65,7 @@
     align-items: center;
     width: 100%;
     margin-left: -10px;
+    margin-top: -140px;
 }
 
 .journey-content {

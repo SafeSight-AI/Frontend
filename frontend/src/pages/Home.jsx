@@ -43,6 +43,7 @@ function Home() {
                 </div>
             </div>
         </div>
+        
         <div className="journey-container">
             <div className="content-wrapper"> 
                 <div className="journey-content">

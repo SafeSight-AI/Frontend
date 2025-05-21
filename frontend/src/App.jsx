@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Home from "./pages/Home";
 import LiveMonitoring from "./pages/LiveMonitoring";
 import AlertHistory from "./pages/AlertHistory";
+import Dashboard from "./pages/Dashboard";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Frontend" element={<Home />} />
           <Route path="/live-monitoring" element={<LiveMonitoring />} />
           <Route path="/alert-history" element={<AlertHistory />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
