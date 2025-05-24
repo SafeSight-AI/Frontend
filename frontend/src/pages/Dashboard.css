@@ -22,4 +22,7 @@
     width: 100%;
     background-color: rgb(53, 53, 53);
     overflow: hidden; /* Prevent overflow of the components inside */
+    gap: 600px;  /* Space between grid components */
+    align-items: stretch; /* makes both columns stretch to same height */
 }
+
