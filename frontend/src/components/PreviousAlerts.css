@@ -1,15 +1,16 @@
 .previous-alerts-container {
-    width: 100px;
-    height: 100px;
-    background-color: #ff0000;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    color: white;
-    padding: 16px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100px;
+  height: 100px;  
+  backdrop-filter: blur(10px);
+  background: rgba(20, 20, 28, 0.75);
+  border: 1px solid rgba(20, 20, 28, 0.75);
+  border-radius: 12px;
+  color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   }
   
