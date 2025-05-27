@@ -35,7 +35,7 @@ const Dashboard = () => {
                         width={605}  
                         maxRows={2} // Max rows possible for grid
                         isResizable={false}   // Optional: turn off resizing, from the import
-                        isDraggable={true}   // Turn off dragging if we want to keep the layout static
+                        isDraggable={false}   // Turn off dragging if we want to keep the layout static
                         compactType="horizontal" // Simple fix for now for the max rows issue but still can happen... Works better at least?
                         // https://github.com/react-grid-layout/react-grid-layout/issues/1278 ...
                         >
