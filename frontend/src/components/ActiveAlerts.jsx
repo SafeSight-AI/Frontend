@@ -24,16 +24,16 @@ const ActiveAlerts = () => {
 /* Production code, work in progress
 
     // API URL to fetch active alerts, replace with actual endpoint and is constant because will never have to change
-    const apiUrl = !!!
+    const apiUrl = "!!!""
 
     const ActiveAlerts = () => {
         const [alertActive, setAlert] = useState(false);
         useEffect(() => {
-            // Call the API and parse the result
+            // Call API
             const response = await fetch(apiUrl);
 
             ...
-            
+
         });
     
     }
