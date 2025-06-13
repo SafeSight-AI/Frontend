@@ -1,7 +1,7 @@
 import "./ActiveAlerts.css";
 import check from "../assets/check.png";
 import exclamation from "../assets/exclamation.png";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // these links both have actual good examples of how to use useState and useEffect
 // https://react.dev/reference/react/useEffect
@@ -27,11 +27,13 @@ const ActiveAlerts = () => {
 // Production code, work in progress
 
 // API URL to fetch active alerts, replace with actual endpoint and is constant because will never have to change
-const apiUrl = "https://1pdqypk59l.execute-api.us-east-2.amazonaws.com/prod/get-rekognition-result";
+const apiUrl = "https://pfmthlmvvh.execute-api.us-east-1.amazonaws.com/prod/rekognition/latest";
 
 const ActiveAlerts = () => {
     const [alertActive, setAlert] = useState(false);
     const [error, setError] = useState(null);
+    const lastAlertedFileRef = useRef(null);
+
 
     useEffect(() => {
         // Fetch alert status from the API when the component mounts
@@ -41,49 +43,40 @@ const ActiveAlerts = () => {
             const response = await fetch(apiUrl);
             const jsonResponse = await response.json();
             const data = JSON.parse(jsonResponse.body);
-
-            /*
-            const parsedAlerts = Object.entries(data).map(([fileName, details]) => ({
-                fileName,
-                headCoverings: details.HeadCoverings || [],
-                persons: details.FullResponse?.Persons || [],
-                date: details.FullResponse.ResponseMetadata?.HTTPHeaders?.date || "No Date Provided",
-            }));
-            */
+            console.log("Raw API data:", data);
+            const alertId = data.imageId || data.timestamp || 'default';
             
-            // similar to above, but only getting persons detected and head coverings detected
-            const parsedAlerts = Object.entries(data).map(([fileName, details]) => ({
-              fileName,
-              persons: details.FullResponse?.Persons || [],
-              headCoverings: details.HeadCoverings || [],
-            }));
+            const headCoverings = data.HeadCoverings || [];
+            const persons = data.FullResponse?.Persons || [];
 
-            // .some is used to check if at least one element in the array meets the condition of someone missing ppe
-            // if no one is missing hardhat ppe, then alertActive will be false else true
-            const violationDetected = parsedAlerts.some(alert => 
-              alert.headCoverings.length === 0 
-              && alert.persons.length > 0 // atleast one person detected
-            );
-
-            if (violationDetected) {
-                setAlert(true);
-                setTimeout(() => setAlert(false), 10000); // Flash alert for 10 seconds
+            console.log("HeadCoverings:", headCoverings);
+            console.log("Persons:", persons);
+            
+            if (
+              headCoverings.length === 0 &&
+              persons.length > 0 &&
+              lastAlertedFileRef.current !== alertId
+            ) {
+              console.log("New alert triggered from latest image");
+              setAlert(true);
+              lastAlertedFileRef.current = alertId; // Mark this alert as handled
+              setTimeout(() => setAlert(false), 5000); // Auto reset alert
+            } else {
+              console.log("No new alert or already alerted.");
             }
-
           } catch (error) {
-            // log error and show error message
             console.error("Error fetching alert status from rekognition:", error);
             setError(error.message);
           }
         };
 
-        // CHATGPT ADDED THIS NEED TO ASK ABOUT !!!!!!!!!!!!!!!!!!!!!!!1
-        // 🔁 Call fetchAlertStatus every 5 seconds
-        const interval = setInterval(fetchAlertStatus, 20000);
+
+        const interval = setInterval(fetchAlertStatus, 3000);
+        //fetchAlertStatus();
 
         // 🧹 Clean up the interval when component unmounts
         return () => clearInterval(interval);
-    }, []);
+    }, []); // Depend on lastAlertedFile to avoid re-alerting for the same image
     
 
 
@@ -99,6 +92,9 @@ const ActiveAlerts = () => {
         {alertActive ? "❗ ALERT - Violation Detected" : "✅ All Clear"}
       </p>
       {error && <p className="error-text">Error: {error}</p>}
+        <button className="alert-button" onClick={() => setAlert(false)}>
+          {"Reset Alert " + (alertActive ? "to Safe" : "Status")}
+        </button>
     </div>
   );
 };
@@ -109,3 +105,4 @@ export default ActiveAlerts;
 
 
 
+// 
