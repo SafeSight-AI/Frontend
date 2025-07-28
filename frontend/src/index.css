@@ -1,8 +1,10 @@
-html, body {
-  overflow-x: hidden;
-  width: 100%;
+html, body, #root {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2a37; 
 }
-
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

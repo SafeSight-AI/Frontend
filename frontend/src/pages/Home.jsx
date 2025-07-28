@@ -5,13 +5,15 @@ import Katie from "../assets/Katie.jpg";
 import Drew from "../assets/Drew.jpg";
 import Chris from "../assets/Chris.jpg";
 import Abdullahi from "../assets/Abdullahi.jpg";
+import Zane from "../assets/Zane.jpeg";
 
 // Dummy team data with image paths
 const teamMembers = [
   { name: "Katie Pflum", major: "Global Supply Chain Management & Industrial Engineering", role: "Chief Executive Officer (CEO) & Head of Strategy", image: Katie },
   { name: "Drew Adomaitis​", major: "Computer Science", role: "Chief Technology Officer (CTO)", image: Drew },
   { name: "Chris Cooley", major: "Computer Science", role: "Lead Front-End Developer & UX Designer", image: Chris },
-  { name: "Abdullahi Ayantayo", major: "Computer Science", role: "Director of Data Science & AI Optimization", image: Abdullahi }
+  { name: "Abdullahi Ayantayo", major: "Computer Science", role: "Director of Data Science & AI Optimization", image: Abdullahi },
+  { name: "Zane Christe", major: "Computer Science", role: "EDIT LATER", image: Zane }, // Example additional member
 ];
 
 function Title() {
@@ -24,7 +26,7 @@ function Title() {
 
 function Home() {
     return (
-      <div>
+      <div className="home-page">
         <Title />
         <div className="home-container">
             <div className="content-wrapper">
