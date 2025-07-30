@@ -1,0 +1,17 @@
+.statistics-container {
+  width: 100px;
+  height: 100px;  
+  backdrop-filter: blur(10px);
+  background: rgba(20, 20, 28, 0.75);
+  border: 1px solid rgba(20, 20, 28, 0.75);
+  border-radius: 12px;
+  color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px .5px rgba(146, 181, 255, 0.35);
+  }
+  

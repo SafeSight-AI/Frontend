@@ -13,6 +13,7 @@ function Navbar() {
         <li><Link to="/Frontend" className="navbar-link">Home</Link></li>
         <li><Link to="/live-monitoring" className="navbar-link">Live Monitoring</Link></li>
         <li><Link to="/alert-history" className="navbar-link">Alert History</Link></li>
+        <li><Link to="/dashboard" className="navbar-link">Dashboard</Link></li>
       </ul>
     </nav>
   );

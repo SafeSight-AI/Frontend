@@ -1,0 +1,30 @@
+.dash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+    margin-bottom: 0px;
+    margin-left: -20px;
+    width: 1200px;
+    height: 100px;
+}
+
+.dash-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 800px; /* adjust width of the content wrapper */
+    width: 100%;
+    background-color: rgb(53, 53, 53);
+    overflow: hidden; /* Prevent overflow of the components inside */
+    gap: 600px;  /* Space between grid components */
+    align-items: stretch;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    background-image: url('../assets/background1.png'); 
+}
+

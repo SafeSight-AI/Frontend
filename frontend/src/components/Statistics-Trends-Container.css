@@ -1,0 +1,26 @@
+.statistics-trends-container {
+  width: 250px;
+  height: 250px;  
+  backdrop-filter: blur(10px);
+  background: rgba(20, 20, 28, 0.70);
+  border: 1px solid rgba(20, 20, 28, 0.70);
+  border-radius: 12px;
+  color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 2px rgba(146, 181, 255, 0.35);
+  }
+  
+  .statistics-trends-wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 12px;
+    width: 110%; /* Adjusted width of all the 4 boxes within the container with this */
+    height: 100%;
+  }
